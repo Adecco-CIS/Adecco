@@ -193,14 +193,20 @@ module.exports = function (grunt) {
                 layout: '<%= yeoman.src %>/templates/layouts/default.hbs',
                 partials: '<%= yeoman.src %>/templates/partials/*.hbs'
             },
-            pages: {
+            rwp: {
+                options: {
+                    layout: '<%= yeoman.src %>/templates/layouts/rwp/default.hbs'
+                },
                 files: {
-                    '<%= yeoman.src %>/': ['<%= yeoman.src %>/templates/pages/*.hbs', '!<%= yeoman.src %>/templates/pages/index.hbs']
+                    '<%= yeoman.src %>/rwp/' : ['<%= yeoman.src %>/templates/pages/rwp/*.hbs']
                 }
             },
-            index: {
+            ssp: {
+                options: {
+                    layout: '<%= yeoman.src %>/templates/layouts/ssp/default.hbs'
+                },
                 files: {
-                    '<%= yeoman.src %>/': ['<%= yeoman.src %>/templates/pages/index.hbs']
+                    '<%= yeoman.src %>/ssp/' : ['<%= yeoman.src %>/templates/pages/ssp/*.hbs']
                 }
             }
         },
