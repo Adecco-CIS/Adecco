@@ -1,4 +1,4 @@
-// Generated on 2015-04-08 using generator-bones 0.0.4
+// Generated on 2015-04-16 using generator-bones 0.0.4
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
                     livereload: LIVERELOAD_PORT
                 },
                 files: [
-                    '<%= yeoman.src %>/templates/{,*/}*.hbs',
+                    '<%= yeoman.src %>/templates/**/*.hbs',
                     '{.tmp,<%= yeoman.src %>}/css/{,*/}*.css',
                     '{.tmp,<%= yeoman.src %>}/js/{,*/}*.js',
                     '<%= yeoman.src %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -194,19 +194,18 @@ module.exports = function (grunt) {
                 partials: '<%= yeoman.src %>/templates/partials/*.hbs'
             },
             rwp: {
-                options: {
-                    layout: '<%= yeoman.src %>/templates/layouts/rwp/default.hbs'
-                },
                 files: {
-                    '<%= yeoman.src %>/rwp/' : ['<%= yeoman.src %>/templates/pages/rwp/*.hbs']
+                    '<%= yeoman.src %>/rwp/': ['<%= yeoman.src %>/templates/rwp/*.hbs']
                 }
             },
             ssp: {
-                options: {
-                    layout: '<%= yeoman.src %>/templates/layouts/ssp/default.hbs'
-                },
                 files: {
-                    '<%= yeoman.src %>/ssp/' : ['<%= yeoman.src %>/templates/pages/ssp/*.hbs']
+                    '<%= yeoman.src %>/ssp/': ['<%= yeoman.src %>/templates/ssp/*.hbs']
+                }
+            },
+            index: {
+                files: {
+                    '<%= yeoman.src %>/': ['<%= yeoman.src %>/templates/index.hbs']
                 }
             }
         },
